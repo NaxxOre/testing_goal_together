@@ -20,7 +20,7 @@ export default function VideoPage() {
   useEffect(() => {
     const fetchVideo = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/videos/${id}`);
+        const response = await axios.get(`https://testing-goal-together-3.onrender.com/api/videos/${id}`);
         setVideo(response.data);
       } catch (error) {
         console.error('Failed to fetch video:', error);

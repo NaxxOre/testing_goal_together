@@ -9,7 +9,7 @@ export default function ProAdminPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/prosubmit', { name, videoLink });
+      const response = await axios.post('https://testing-goal-together-3.onrender.com/api/prosubmit', { name, videoLink });
       console.log('Response:', response.data); // Debugging log
       alert('Video submitted successfully!');
       setName('');

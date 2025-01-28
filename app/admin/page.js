@@ -12,7 +12,7 @@ export default function AdminPage() {
   useEffect(() => {
     const fetchCustomVideos = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/customvideos');
+        const response = await axios.get('https://testing-goal-together-3.onrender.com/api/customvideos');
         setCustomVideos(response.data);
       } catch (error) {
         console.error('Failed to fetch custom videos:', error);
@@ -33,7 +33,7 @@ export default function AdminPage() {
       const customVideo = customVideos.find((video) => video.videoLink === selectedCustomVideo);
 
       // Submit the video (YouTube or custom)
-      await axios.post('http://localhost:5000/api/submit', {
+      await axios.post('https://testing-goal-together-3.onrender.com/api/submit', {
         title,
         youtubeLink: youtubeLink || '', // Include if provided
         thumbnail: thumbnail || '', // Include if provided
